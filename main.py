@@ -157,7 +157,6 @@ if __name__ == "__main__":
                 nome_cli = linha['Nome']
                 email_cli = linha['Email']
                 fatura_path_cli = linha['ArquivoFatura']
-                vencimento_cli = linha['Vencimento']
                 
                 emails_cc_lista = []
                 if 'EmailCopia' in linha and pd.notna(linha['EmailCopia']):
@@ -179,14 +178,8 @@ if __name__ == "__main__":
                 <body>
                     <div class="container">
                         <p class="header">Olá prezados, como estão?</p>
-                        <p>Encaminhamos em anexo o boleto da {nome_cli} referente a mensalidade associativa da CBPCE com vencimento para o dia {vencimento_cli}.</p>
-                        <p>Caso não consiga realizar o pagamento via boleto, segue abaixo os nossos dados bancários para depósito.</p>
-                        <p><strong>Banco do Brasil</strong><br>
-                        Ag. 2917-3<br>
-                        Conta 70077-0<br>
-                        CNPJ 04.549.837/0001-45<br>
-                        Chave Pix: 04549837000145
-                        </p>
+                        <p>Encaminhamos em anexo o boleto da {nome_cli} referente a mensalidade associativa da CBPCE do mês de junho de 2025.</p>
+                        
                         <p>Por favor acusar o recebimento, em caso de dúvidas entre em contato conosco.</p>
                         {assinaturaEmail}
                     </div>
